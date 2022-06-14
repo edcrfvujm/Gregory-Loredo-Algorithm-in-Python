@@ -230,7 +230,7 @@ class GL(object):
         m_opt = np.argmax(lgOm1)+1
 
   '''
-  This part or parameters is forked from fdarvas/GL_algorithm
+  This part of parameters is forked from fdarvas
   '''
         P_w = 10** ((lgOm1_w[m_opt-1]-np.log10(w_array)) - lsum(lgOm1_w[m_opt-1]-np.log10(w_array)))
         lgO_period = lsum(lgOm1)
