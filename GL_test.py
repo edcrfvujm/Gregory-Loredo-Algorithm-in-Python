@@ -229,6 +229,9 @@ class GL(object):
         self.lgOm1_w = lgOm1_w
         m_opt = np.argmax(lgOm1)+1
 
+  '''
+  This part or parameters is forked from fdarvas/GL_algorithm
+  '''
         P_w = 10** ((lgOm1_w[m_opt-1]-np.log10(w_array)) - lsum(lgOm1_w[m_opt-1]-np.log10(w_array)))
         lgO_period = lsum(lgOm1)
         P_period = 1/(1+(10**(-lgO_period)))
@@ -243,6 +246,7 @@ class GL(object):
         else:
             w_conf=[w_peak,w_peak]
 
+            
         self.t0 = t0
         self.lgO_period = lgO_period
         self.P_period = P_period
